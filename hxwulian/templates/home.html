@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <div class="jumbotron text-center">
+      <h1>华讯物联管理平台</h1>
+      <br>
+      {% if session.logged_in == NULL %}
+        <h2><a href="/login" class="btn btn-success btn-lg">登录</a></h2>
+      {% else %}
+        <br>
+            <a href="{{url_for('chronograf')}}" class="btn btn-primary btn-lg" role="button" aria-pressed="true">服务器监控</a>&nbsp;&nbsp;
+            <a href="{{url_for('thinger')}}" class="btn btn-primary btn-lg" role="button" aria-pressed="true">&nbsp;终端监控&nbsp;</a>&nbsp;&nbsp;
+            <a href="{{url_for('nodered')}}" class="btn btn-primary btn-lg" role="button" aria-pressed="true">&nbsp;触发流程&nbsp;</a>
+      {% endif %}
+  </div>
+{% endblock %}

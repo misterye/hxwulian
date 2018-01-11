@@ -1,0 +1,29 @@
+ <nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"><span class="glyphicon"></span>控制台</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+    {% if session.logged_in %}
+      {% if session['username'] == 'admin' %}
+      <ul class="nav navbar-nav">
+          <li><a href="/register"><span class="glyphicon"></span>用户注册</a></li>
+          <li><a href="/dashboard_users"><span class="glyphicon"></span>用户管理</a></li>
+      </ul>
+      {% endif %}
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/chronograf"><span class="glyphicon"></span>服务器监控</a></li>
+        <li><a href="/thinger"><span class="glyphicon"></span>终端监控</a></li>
+        <li><a href="/nodered"><span class="glyphicon"></span>触发流程</a></li>
+        <li><a href="/logout"><span class="glyphicon"></span>注销</a></li>
+      </ul>
+    {% endif %}
+    </div>
+  </div>
+</nav> 
