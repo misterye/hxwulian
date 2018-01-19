@@ -211,6 +211,11 @@ def thinger():
 def nodered():
     return redirect("http://111.47.20.166:1880")
 
+@app.route('/grafana')
+@is_logged_in
+def grafana():
+    return redirect("http://111.47.20.166:3000")
+
 if __name__ == '__main__':
     app.secret_key='fpaoiega84qddq48q0dijfe41fj0iggr9wrj'
     app.run('0.0.0.0', 8023)

@@ -1,0 +1,11 @@
+{
+		"server": "us4.ssservice.space",
+		"local_address": "127.0.0.1",
+		"local_port": 1080,
+		"timeout": 300,
+		"workers": 1,
+		"server_port": 16335,
+		"password": "GjCPhQ",
+		"method": "aes-256-cfb",
+		"plugin": ""
+}
