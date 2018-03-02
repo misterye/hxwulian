@@ -3,3 +3,4 @@
 hxwulian/instance
 hxwulian/*.pyc
 scripts/proxychains-ng/
+scripts/*.json
