@@ -1,0 +1,5 @@
+.git/
+.venv/
+hxwulian/instance
+hxwulian/*.pyc
+scripts/proxychains-ng/

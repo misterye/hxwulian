@@ -13,8 +13,9 @@ from passlib.hash import sha256_crypt
 from functools import wraps
 import hashlib
 
-app = Flask(__name__)
+app = Flask(__name__, instance_relative_config=True)
 app.config.from_object('config.DevelopmentConfig')
+app.config.from_pyfile('config.py')
 
 # init MYSQL
 mysql = MySQL(app)
@@ -217,5 +218,4 @@ def grafana():
     return redirect("http://111.47.20.166:3000")
 
 if __name__ == '__main__':
-    app.secret_key='fpaoiega84qddq48q0dijfe41fj0iggr9wrj'
     app.run('0.0.0.0', 8023)
